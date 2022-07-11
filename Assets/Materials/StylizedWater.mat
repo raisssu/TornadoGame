@@ -84,7 +84,7 @@ Material:
     - RefractionScale: 5
     - RefractionSpeed: 0.05
     - RefractionStrength: 30
-    - WaterDepth: 10
+    - WaterDepth: 15
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -114,7 +114,7 @@ Material:
     m_Colors:
     - DeepWater: {r: 0.06581522, g: 0.44463813, b: 0.8207547, a: 0.7607843}
     - FoamColor: {r: 1, g: 1, b: 1, a: 0.7843137}
-    - ShallowWater: {r: 0, g: 0.8020835, b: 1, a: 0.3882353}
+    - ShallowWater: {r: 0, g: 1, b: 0.97335625, a: 0.3882353}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
