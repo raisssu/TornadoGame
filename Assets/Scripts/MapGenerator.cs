@@ -39,8 +39,12 @@ public class MapGenerator : MonoBehaviour
     
     float[,] falloffMap;
     
+    GameObject mesh;
+    
     void Awake() {
         falloffMap = FalloffGenerator.GenerateFalloffMap(fallOffMapSize, fallOffStart, fallOffEnd);
+        
+        CreateMesh();
     }
     
     public void GenerateMap(){
@@ -73,7 +77,7 @@ public class MapGenerator : MonoBehaviour
             display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve), TextureGenerator.TextureFromColorMap(colorMap, mapWidth, mapHeight));
         }
         else if (drawMode == DrawMode.FalloffMap){
-            display .DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(fallOffMapSize, fallOffStart, fallOffEnd)));
+            display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(fallOffMapSize, fallOffStart, fallOffEnd)));
         }
 
     }
@@ -93,7 +97,18 @@ public class MapGenerator : MonoBehaviour
         }
         
         falloffMap = FalloffGenerator.GenerateFalloffMap(fallOffMapSize, fallOffStart, fallOffEnd);
-
+               
+    }
+    
+    public void CreateMesh(){
+        mesh = GameObject.Find("Mesh");
+        if (!mesh.GetComponent<MeshCollider>()) {
+            mesh.AddComponent<MeshCollider>();
+        }
+        else {
+            DestroyImmediate(mesh.GetComponent<MeshCollider>());
+            mesh.AddComponent<MeshCollider>();
+        }
     }
     
 }

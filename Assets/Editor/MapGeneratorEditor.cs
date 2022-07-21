@@ -13,10 +13,29 @@ public class MapGeneratorEditor : Editor
         if(DrawDefaultInspector()){
             if(mapGen.autoUpdate){
                 mapGen.GenerateMap();
+                mapGen.CreateMesh();
             }
         }
         if(GUILayout.Button("Generate")){
             mapGen.GenerateMap(); 
+        }
+    }
+}
+
+[CustomEditor(typeof(ObjectGenerator))]
+public class ObjectGeneratorEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        ObjectGenerator objGen = (ObjectGenerator)target;
+        DrawDefaultInspector();
+        
+        if (GUILayout.Button("Generate")){
+            objGen.SpawnObjects();
+        }
+        
+        if (GUILayout.Button("Clear")){
+            objGen.ClearObjects();
         }
     }
 }
