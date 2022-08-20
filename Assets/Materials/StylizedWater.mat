@@ -19,6 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Displacement:
+        m_Texture: {fileID: 2800000, guid: d0f2d975dcbcd7648a3c1289917b460f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Normal_Map:
+        m_Texture: {fileID: 2800000, guid: 4176e15cf2f79214ead2711e3cc6701a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Second_Map:
+        m_Texture: {fileID: 2800000, guid: 9f4d3be17e3d916439bc83cc5d855f6c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -77,14 +89,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - FoamAmount: 8
+    - Displacement: 4.96
+    - Displacement_Strength: 1.5
+    - FoamAmount: 1
     - FoamCutoff: 1
-    - FoamScale: 200
+    - FoamScale: 600
     - FoamSpeed: 1
-    - RefractionScale: 5
-    - RefractionSpeed: 0.05
-    - RefractionStrength: 20
-    - WaterDepth: 15
+    - Normal_Strength: 0.5
+    - RefractionScale: 2
+    - RefractionSpeed: 0.01
+    - RefractionStrength: 8
+    - Smoothness: 0.3
+    - WaterDepth: 16
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -112,9 +128,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - DeepWater: {r: 0.06581522, g: 0.44463813, b: 0.8207547, a: 0.7607843}
+    - DeepWater: {r: 0.065815195, g: 0.4446381, b: 0.8207547, a: 0.7607843}
     - FoamColor: {r: 1, g: 1, b: 1, a: 0.7843137}
-    - ShallowWater: {r: 0, g: 1, b: 0.97335625, a: 0.3882353}
+    - ShallowWater: {r: 0, g: 1, b: 0.9733562, a: 0.3882353}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

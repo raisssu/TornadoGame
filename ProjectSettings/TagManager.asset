@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mesh
   - Tree
+  - CinemachineTarget
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Post Processing
+  - whatIsGround
+  - Volume
   - 
   - 
   - 
